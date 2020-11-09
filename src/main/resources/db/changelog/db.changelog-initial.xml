@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"
+                   logicalFilePath="db.changelog-initial.xml">
+
+    <changeSet author="jp@gmail.com" id="marvel-1">
+        <createTable tableName="superheroe">
+            <column name="id" type="INT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(64)"/>
+            <column name="description" type="VARCHAR(500)"/>
+            <column name="resource_uri" type="VARCHAR(150)"/>
+            <column name="last_update" type="VARCHAR(150)"/>
+            <column name="thumbnail_uri" type="VARCHAR(150)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
